@@ -1,12 +1,33 @@
-@SuppressWarnings("ALL")
+import com.furniture.FurnitureItem;
+
+
 public class FurnitureItemImpl {
-    int FurnitureCode;
-    int FurnitureType;
-    int gradeOfItem;
-    String colour;
-    int FurnitureUsage;
-    String Price;
-    int discount=5;
+    public void main(String[] args) {
+        FurnitureItem furnitureItem = new FurnitureItem();
+        FurnitureItem.getfurnitureCode = 101;
+        System.out.println("furnitureCode : " +FurnitureItem.getfurnitureCode());
+
+        FurnitureItem.getfurnitureType="table";
+        System.out.println("furnitureType = " + FurnitureItem.getfurnitureType());
+
+        FurnitureItem.getgradeOfFurniture="grade1";
+        System.out.println("furnitureType = " + FurnitureItem.getgradeOfFurniture());
+
+        FurnitureItem.getfurnitureUsage="outdoor";
+        System.out.println("furnitureType = " + FurnitureItem.getfurnitureUsage());
+
+        FurnitureItem.getprice="$10";
+        System.out.println("furnitureType = " + FurnitureItem.getprice());
+
+    }
+    private int FurnitureCode;
+    private int FurnitureType;
+    private int gradeOfItem;
+    private String colour;
+    private int FurnitureUsage;
+    private  String Price;
+    private int discount=5;
+    private String furnitureUsage;
 
     public void setFurnitureCode(int furnitureCode) {
         FurnitureCode = furnitureCode;
@@ -40,14 +61,19 @@ public class FurnitureItemImpl {
         this.discountPercentage = discountPercentage;
     }
 
-    int price;
-    int discountPercentage;
+    private int price;
+    private int discountPercentage;
 
 
 
     public float calculateDiscount() {
-        discount = price * discountPercentage / 100;
+       float  discountPrice =  price * 0.95F;
+
+        if(furnitureUsage=="outdoor"&& furnitureUsage=="grade1"){
+            return discountPrice;
+        }
 
         return discount;
     }
+
 }

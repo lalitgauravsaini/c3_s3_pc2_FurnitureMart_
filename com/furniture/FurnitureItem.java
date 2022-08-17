@@ -1,22 +1,53 @@
 package com.furniture;
 
+
 @SuppressWarnings("unused")
 public class FurnitureItem {
-    int FurnitureCode;
-    int FurnitureType;
-    int gradeOfItem;
-    String  colour;
+    public static int setfurnitureCode;
+    public static int setfurnitureType;
+    public static int getfurnitureCode;
+    public static String getfurnitureType;
+    public static String getgradeOfFurniture;
+    public static String getfurnitureUsage;
+    public static String getprice;
+    private int furnitureCode;
+    private int furnituretype;
+    private int gradeOfFurniture;
+    private String colour;
 
-    public int getFurnitureCode() {
-        return FurnitureCode;
+    public static String getfurnitureCode() {
+
+    return null;
     }
 
-    public int getFurnitureType() {
-        return FurnitureType;
+
+
+    public static String getfurnitureType() {
+        return null;
+    }
+
+    public static String getgradeOfFurniture() {
+        return null;
+    }
+
+    public static String getfurnitureUsage() {
+        return null;
+    }
+
+    public static String getprice() {
+        return null;
+    }
+
+    public int getFurnitureCode() {
+        return furnitureCode;
+    }
+
+    public int getFurnituretype() {
+        return furnituretype;
     }
 
     public int getGradeOfItem() {
-        return gradeOfItem;
+        return gradeOfFurniture;
     }
 
     public String getColour() {
@@ -35,21 +66,22 @@ public class FurnitureItem {
         return discountPercentage;
     }
 
-    public int getDiscount() {
+    public float getDiscount() {
         return discount;
     }
 
-    int FurnitureUsage;
-    String Price;
-    int price;
-    int discountPercentage;
-    int discount=5;
+    private int FurnitureUsage;
+    private String Price;
+    private int price;
+    private int discountPercentage;
+    private float discount=5;
     public void FurnitureItemClass(){
 
     }
     public float calculateDiscount() {
-      discount=price*discountPercentage/100;
+      discount= (price*0.95F);
 
         return discount;
     }
+
 }
