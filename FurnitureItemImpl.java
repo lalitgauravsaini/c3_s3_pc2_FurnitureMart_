@@ -1,6 +1,7 @@
 import com.furniture.FurnitureItem;
 
 
+@SuppressWarnings("ALL")
 public class FurnitureItemImpl {
     public void main(String[] args) {
         FurnitureItem furnitureItem = new FurnitureItem();
