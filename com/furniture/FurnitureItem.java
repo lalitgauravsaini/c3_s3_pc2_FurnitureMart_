@@ -1,7 +1,7 @@
 package com.furniture;
 
 
-@SuppressWarnings("unused")
+@SuppressWarnings("ALL")
 public class FurnitureItem {
     public static int setfurnitureCode;
     public static int setfurnitureType;
@@ -16,12 +16,8 @@ public class FurnitureItem {
     private String colour;
 
     public static String getfurnitureCode() {
-
     return null;
     }
-
-
-
     public static String getfurnitureType() {
         return null;
     }
@@ -79,9 +75,15 @@ public class FurnitureItem {
 
     }
     public float calculateDiscount() {
-      discount= (price*0.95F);
-
+      float discountPrice= (price*0.95F);
+        String furnitureUsage = null;
+        if(furnitureUsage=="outdoor"){
+            System.out.println("furnitureUsage = " + furnitureUsage);
+        } else if(furnitureUsage=="grade1") {
+            System.out.println("furnitureUsage = " + furnitureUsage);
+        }else{
+            return discountPrice;
+      }
         return discount;
     }
-
 }
